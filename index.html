@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2048</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="index.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="top">
+			<h3 class="title">2048</h3>
+			<div class="score-box">
+				<div class="score">
+					<p>Score</p>
+					<p>0</p>
+				</div>
+				<div class="best-score">
+					<p>Best Score</p>
+					<p>0</p>
+				</div>
+				
+			</div>
+		</div>
+		<div class="content">
+			<!-- <div>
+				<ul class="clearfix">
+					<li><div></div></li>
+					<li><div></div></li>
+					<li><div></div></li>
+					<li><div></div></li>
+				</ul>
+				<ul class="clearfix">
+					<li><div></div></li>
+					<li><div></div></li>
+					<li><div></div></li>
+					<li><div></div></li>
+			    </ul>
+				<ul class="clearfix">
+					<li><div></div></li>
+					<li><div></div></li>
+					<li><div></div></li>
+					<li><div></div></li>
+				</ul>
+				<ul class="clearfix">
+					<li><div></div></li>
+					<li><div></div></li>
+					<li><div></div></li>
+					<li><div></div></li>
+			    </ul>
+			</div> -->
+		</div>
+	</div>
+
+	<script>
+		window.onload=function(){
+			var iScore=document.querySelectorAll(".score p")[1];
+			var maxScore=document.querySelectorAll(".best-score p")[1];
+			var content=document.getElementsByClassName("content")[0];
+			_2048.Game.init({
+				content:content,
+				iScore:iScore,
+				maxScore:maxScore
+			});
+			_2048.Game.start();
+			
+		}
+	</script>
+</body>
+</html>
